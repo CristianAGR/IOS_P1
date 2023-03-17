@@ -46,7 +46,6 @@
 		F13E08CD29BFE46C002FAE59 = {
 			isa = PBXGroup;
 			children = (
-				F1D063FA29C39FAA0081C4DC /* QuizController.swift */,
 				F13E08D829BFE46C002FAE59 /* Juego_Ex */,
 				F13E08D729BFE46C002FAE59 /* Products */,
 			);
@@ -72,6 +71,7 @@
 				F13E08E729BFE46D002FAE59 /* Info.plist */,
 				F13E08EF29BFE7E1002FAE59 /* ViewControllerMat.swift */,
 				F13E08F129BFEF39002FAE59 /* ViewControllerDificultad.swift */,
+				F1D063FA29C39FAA0081C4DC /* QuizController.swift */,
 			);
 			path = Juego_Ex;
 			sourceTree = "<group>";
