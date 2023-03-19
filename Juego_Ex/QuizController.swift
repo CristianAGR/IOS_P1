@@ -28,10 +28,10 @@ class QuizController: UIViewController {
     var derrota:Int = 0
     var resultado = ""
     var vidasValue = 0
-    // tematica: preguntas raras de historia
-    var quiz = [["La guerra de los emús, ¿existió?", "True"], ["El 10 de mayo es dìa de las madres?", "True"], ["El 412 es mejor que el 411?", "True"], ["La comida llamada guacamaya es originaria de CDMX", "False"], ["El nombre real de pigy es carlos", "True"], ["Los procesadores son hechos con silicio?", "True"], ["GPU son las siglas para graphic processor unity", "True"], ["China es el pais mas grande del mundo", "False"], ["El oceano atlantico es el mas grande del mundo", "False"], ["El heptagono tiene 11 lados", "False"], ["El animal que provoca mas muertes al año es el tiburon", "False"], ["El cuerpo humano tiene 206 huesos", "True"], ["Messi es el futbolista con mas balones de oro", "True"], ["El platino es el mineral mas duro del planeta", "False"], ["Un gusano de tierra tiene 5 corazones", "True"], ["Shanghai es la ciudad mas poblada del mundo", "False"], ["Hitler nacio en Austria", "True"], ["La bandera olimpica tiene 3 anillos", "False"], ["Un lustro son 1000 años", "False"], ["Una araña tiene 6 patas", "False"], ["La moneda de Japon es el yen", "True"]]
     
-    //ArregloPreguntasBasico
+    var dificultad: String?
+    // tematica: preguntas raras de historia
+    var quiz = [["",""]]//ArregloPreguntasBasico
     var quizBasico = [["¿La independencia de México inició en 1810?","Verdadero"],
                       ["¿Cristobal Colón exploró el nuevo mundo?","Verdadero"],
                       ["¿China es la civilización más antigua del mundo?","Falso"],
@@ -43,6 +43,31 @@ class QuizController: UIViewController {
                       ["¿En Egipto solo alababan a un Dios?","Falso"],
                       ["¿El rey Arturo existió realmente como el rey de Gran Bretaña?","Falso"]]
     
+    //ArregloPreguntasIntermedio
+    var quizIntermedio = [
+    ["¿El muro de Berlín fue derribado en 1989?","Verdadero"],
+    ["¿Alejandro Magno fue el rey de la antigua Roma?","Falso"],
+    ["¿Nueva Zelanda fue el primer país en otorgar a las muejeres el derecho al voto?", "Verdadero"],
+    ["¿El día D en la Segunda Guera Mundial fue el 6 de Noviembre de 1944?","Falso"],
+    ["¿Rusia se retiró de la Primera guerra Mundial por su revolución?","Verdadero"],
+    ["¿La Gran Depresión ocurrió después de la Segunda Guerra Mundial?","Falso"],
+    ["¿Los acontecimientos de Chernobyl fueron encubiertos por Rusia y descubiertos por Europa?","Verdadero"],
+    ["¿El padre de Zeus es Atlas?","Falso"],
+    ["¿La revolución bolchevique es la revolución rusa?","Verdadero"],
+    ["¿Galileo Galilei creó el telescopio?","Falso"]]
+    
+    //ArregloPreguntasDificil
+    var quizAvanzado =
+    [["¿La guerra de los emús ocurrió?","Verdadero"],
+    ["¿Napoleón es conocido como el Hombre de Sangre y Hierro?","Falso"],
+    ["¿Erwin Rommel fue conocido como el zorro del desierto en la Segunda Guerra Mundial?","Verdadero"],
+    ["¿La batalla del Alamein fue la última gran batalla de tanques de la historia?","Falso"],
+    ["¿La Luftwaffe fue derrotada por última vez en la batalla de Inglaterra?","Verdadero"],
+    ["¿La batalla de Stalingrado fue la más grande batalla de tanques de la historia?","Falso"],
+    ["¿Hubo batallas navales durante la Primera Guera Mundial?","Verdadero"],
+    ["¿La batalla de Guadalcanal aseguró la victoria estadounidense frente a Japón en la Segunda Guerra Mundial?","Falso"],
+    ["¿Existió un artefacto o artilugio apodado Dora durante la Segunda Guerra Mundial?","Verdadero"],
+    ["¿Ferdinand Porsche diseñó y creó algunos de los tanques durante la Segunda Guerra Mundial?","Verdadero"]]
     override func viewDidLoad() {
         super.viewDidLoad()
         iniciar()
@@ -52,17 +77,19 @@ class QuizController: UIViewController {
     }
     
     func iniciar() {
-        if (dificultadLabel.text == "Basico") {
+        dificultadLabel.text = dificultad
+        if (dificultadLabel.text == "BÁSICO!!!!!") {
             victoria = 5
             vidasValue = 3
             quiz = quizBasico
         } else if (dificultadLabel.text == "Intermedio") {
             victoria = 7
             vidasValue = 2
+            quiz = quizIntermedio
         } else if (dificultadLabel.text == "Avanzado") {
             victoria = 10
             vidasValue = 1
-            
+            quiz = quizAvanzado
         }
         vidas.text = "Vidas: " + String(vidasValue)
     }

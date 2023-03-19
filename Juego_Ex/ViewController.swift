@@ -94,6 +94,10 @@ class ViewController: UIViewController {
         dadoImg.image = UIImage(named: caras[cara])
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let enviarnombre = segue.destination as? ViewController else {return}
+        enviarnombre.dificultad = dificultad
+    }
     @IBAction func reto(_ sender: UIButton) {
         cambiarturno()
         establecerEtiquetaTurno()
