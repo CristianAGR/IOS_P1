@@ -528,7 +528,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LzS-3F-r5L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1933.5877862595419" y="-23.239436619718312"/>
+            <point key="canvasLocation" x="2013" y="6"/>
+        </scene>
+        <!--View Controller Juego-->
+        <scene sceneID="QD3-Zp-RB2">
+            <objects>
+                <viewController id="Uge-FV-VdN" customClass="ViewControllerJuego" customModule="Juego_Ex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LM2-q9-m9g">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJh-Nv-EW7">
+                                <rect key="frame" x="145" y="275" width="103" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pregunta2"/>
+                                <connections>
+                                    <action selector="establecerJuego:" destination="Uge-FV-VdN" eventType="touchDown" id="UaF-q7-Xg8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYk-xa-Ml8">
+                                <rect key="frame" x="145" y="389" width="104" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Matematik"/>
+                                <connections>
+                                    <action selector="establecerJuego:" destination="Uge-FV-VdN" eventType="touchUpInside" id="t9a-kA-0KS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvu-lp-vDw">
+                                <rect key="frame" x="145" y="543" width="102" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Combina2"/>
+                                <connections>
+                                    <action selector="establecerJuego:" destination="Uge-FV-VdN" eventType="touchUpInside" id="CEv-4g-aGU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡¡Bienvenido Seleccione un juego para continuar!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JZ-dx-8yR">
+                                <rect key="frame" x="0.0" y="69" width="393" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KBk-EY-NM3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TFA-Ac-T9u"/>
+                    <connections>
+                        <segue destination="EgV-sf-ppq" kind="show" identifier="irDificultad" id="3mS-md-vGv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gM0-E9-00G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1195" y="674"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mup-sF-E8D">
@@ -541,7 +596,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="EgV-sf-ppq" kind="relationship" relationship="rootViewController" id="c1o-36-va6"/>
+                        <segue destination="Uge-FV-VdN" kind="relationship" relationship="rootViewController" id="BgZ-Z0-gQN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mnM-Fl-iZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -550,6 +605,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
