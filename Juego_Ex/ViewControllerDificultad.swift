@@ -27,9 +27,12 @@ class ViewControllerDificultad: UIViewController {
     var vidas = 0
     var puntosParaGanar = 0
     var turno = 0
+    var juego: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nombreJuego = juego ?? ""
+        print(nombreJuego)
         turno = generaAleatorio()
         ImagenPrincipal.image = UIImage(named: "PuercoInicial")
     }
