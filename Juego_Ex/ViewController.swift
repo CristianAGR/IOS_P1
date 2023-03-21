@@ -95,8 +95,16 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let enviarnombre = segue.destination as? ViewController else {return}
-        enviarnombre.dificultad = dificultad
+        let puntos = cara+1
+        
+        if (puntos == 1 || puntos == 3 || puntos == 5) {
+            guard let enviarnombre = segue.destination as? QuizController else {return}
+            enviarnombre.dificultad = dificultad
+        } else {
+            guard let enviarnombre = segue.destination as? ViewControllerMat else {return}
+            enviarnombre.dificultad = dificultad
+        }
+        
     }
     @IBAction func reto(_ sender: UIButton) {
         cambiarturno()

@@ -12,6 +12,7 @@ class ViewControllerMat: UIViewController {
     //Puntuaciones de cada jugador
     @IBOutlet weak var puntos: UILabel!
     @IBOutlet weak var puntosj2: UILabel!
+    @IBOutlet weak var dificultadLabel: UILabel!
     //Vidas de cada jugador
     @IBOutlet weak var vidas: UILabel!
     @IBOutlet weak var vidasj2: UILabel!
@@ -32,11 +33,11 @@ class ViewControllerMat: UIViewController {
     var operadores:[String] = ["+","-","/","*"]
     var puntuacion = 0
     var vidasPuntaje = 3
-    
-    
+    var dificultad: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dificultadLabel.text = dificultad
+        inicializar()
         // Do any additional setup after loading the view.
     }
 
