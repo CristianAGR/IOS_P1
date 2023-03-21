@@ -15,6 +15,7 @@
 		F13E08E629BFE46D002FAE59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13E08E429BFE46D002FAE59 /* LaunchScreen.storyboard */; };
 		F13E08F029BFE7E1002FAE59 /* ViewControllerMat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E08EF29BFE7E1002FAE59 /* ViewControllerMat.swift */; };
 		F13E08F229BFEF39002FAE59 /* ViewControllerDificultad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E08F129BFEF39002FAE59 /* ViewControllerDificultad.swift */; };
+		F170F46829CA376D00D1803F /* ViewControllerJuego.swift in Sources */ = {isa = PBXBuildFile; fileRef = F170F46729CA376D00D1803F /* ViewControllerJuego.swift */; };
 		F1D063FB29C39FAA0081C4DC /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D063FA29C39FAA0081C4DC /* QuizController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		F13E08E729BFE46D002FAE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F13E08EF29BFE7E1002FAE59 /* ViewControllerMat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMat.swift; sourceTree = "<group>"; };
 		F13E08F129BFEF39002FAE59 /* ViewControllerDificultad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDificultad.swift; sourceTree = "<group>"; };
+		F170F46729CA376D00D1803F /* ViewControllerJuego.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerJuego.swift; sourceTree = "<group>"; };
 		F1D063FA29C39FAA0081C4DC /* QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 		F13E08D829BFE46C002FAE59 /* Juego_Ex */ = {
 			isa = PBXGroup;
 			children = (
+				F170F46729CA376D00D1803F /* ViewControllerJuego.swift */,
 				F13E08D929BFE46C002FAE59 /* AppDelegate.swift */,
 				F13E08DB29BFE46C002FAE59 /* SceneDelegate.swift */,
 				F13E08DD29BFE46C002FAE59 /* ViewController.swift */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F13E08DE29BFE46C002FAE59 /* ViewController.swift in Sources */,
+				F170F46829CA376D00D1803F /* ViewControllerJuego.swift in Sources */,
 				F13E08DA29BFE46C002FAE59 /* AppDelegate.swift in Sources */,
 				F1D063FB29C39FAA0081C4DC /* QuizController.swift in Sources */,
 				F13E08F029BFE7E1002FAE59 /* ViewControllerMat.swift in Sources */,
