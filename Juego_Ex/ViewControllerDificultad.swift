@@ -75,7 +75,19 @@ class ViewControllerDificultad: UIViewController {
         etiquetaApoyoVidasIniciales.text = String(vidas)
         etiquetaApoyopUNTUACIONganar.text = String(puntosParaGanar)
         etiquetaApoyoturno.text = String(turno)
-        self.performSegue(withIdentifier: "DifSegue", sender: self)
+        let x = 1
+        if(x == 0){
+            self.performSegue(withIdentifier: "DifSegue", sender: self)
+        }
+        if(x == 2){
+            performSegue(withIdentifier: "irQuiz", sender: self)
+        }
+        if(x == 1){
+            performSegue(withIdentifier: "irMath", sender: self)
+        }
+        
+        
+        
 
     }
 }

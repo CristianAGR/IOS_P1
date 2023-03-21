@@ -34,6 +34,8 @@ class ViewControllerMat: UIViewController {
     var puntuacion = 0
     var vidasPuntaje = 3
     var dificultad: String?
+    
+    //ViewLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         dificultadLabel.text = dificultad

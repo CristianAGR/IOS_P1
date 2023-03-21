@@ -111,9 +111,9 @@ class ViewController: UIViewController {
         establecerEtiquetaTurno()
         let puntos = cara+1
         if (puntos == 1 || puntos == 3 || puntos == 5) {
-            performSegue(withIdentifier: "irQuiz", sender: self)
+            
         } else {
-            performSegue(withIdentifier: "irMath", sender: self)
+            
         }
     }
     
