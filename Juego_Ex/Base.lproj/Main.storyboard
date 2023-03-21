@@ -175,8 +175,6 @@
                         <outlet property="puntosj2" destination="F2I-Up-wnr" id="VfG-Vp-Y2B"/>
                         <outlet property="vidas" destination="Z90-AI-3S4" id="MgL-Fg-XF3"/>
                         <outlet property="vidasj2" destination="2db-aL-hdq" id="LYs-Ge-Wd8"/>
-                        <segue destination="o9c-8m-LTz" kind="show" identifier="irMath" id="7a8-Wx-3R3"/>
-                        <segue destination="Yqg-wl-lUA" kind="show" identifier="irQuiz" id="Aj0-qO-oP9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -285,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2O2-6v-gjP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4812.9770992366412" y="-167.6056338028169"/>
+            <point key="canvasLocation" x="3813" y="-708"/>
         </scene>
         <!--View Controller Mat-->
         <scene sceneID="mWI-iC-Tcx">
@@ -427,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWr-kR-hUv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4783.9694656488546" y="534.50704225352115"/>
+            <point key="canvasLocation" x="3836" y="638"/>
         </scene>
         <!--View Controller Dificultad-->
         <scene sceneID="WkO-6i-BZj">
@@ -524,6 +522,8 @@
                         <outlet property="etiquetaApoyopUNTUACIONganar" destination="pV0-IF-3Im" id="OlO-fX-NAm"/>
                         <outlet property="etiquetaApoyoturno" destination="DnH-lk-Ho2" id="Vvj-SP-1AT"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="DifSegue" id="Ndy-IW-l5r"/>
+                        <segue destination="o9c-8m-LTz" kind="show" identifier="irMath" id="FhI-3O-80u"/>
+                        <segue destination="Yqg-wl-lUA" kind="show" identifier="irQuiz" id="Kse-CO-PZw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LzS-3F-r5L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
