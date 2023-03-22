@@ -70,17 +70,8 @@
                                 <rect key="frame" x="149" y="518" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mo-2Y-fvs">
-                                <rect key="frame" x="50" y="551" width="59" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Reto"/>
-                                <connections>
-                                    <action selector="reto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XeU-oJ-q9S"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f49-Mq-Q1l">
-                                <rect key="frame" x="159" y="762" width="76" height="35"/>
+                                <rect key="frame" x="251" y="765" width="76" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Lanzar"/>
@@ -162,20 +153,38 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvy-J8-k2H">
                                 <rect key="frame" x="35" y="696" width="103" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Verdadero"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Verdadero"/>
+                                <connections>
+                                    <action selector="comprobarRespuesta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CiG-vZ-OSI"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpK-g8-vQy">
                                 <rect key="frame" x="176" y="696" width="57" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Op2"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Op2"/>
+                                <connections>
+                                    <action selector="comprobarRespuesta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZ1-Ki-jKs"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yB9-wG-ACa">
                                 <rect key="frame" x="287" y="695" width="64" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Falso"/>
+                                <connections>
+                                    <action selector="comprobarRespuesta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ot-7i-47K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mo-2Y-fvs">
+                                <rect key="frame" x="79" y="765" width="59" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Falso"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reto"/>
+                                <connections>
+                                    <action selector="reto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XeU-oJ-q9S"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -183,6 +192,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ced-Ba-LpS"/>
                     <connections>
+                        <outlet property="btn1" destination="yvy-J8-k2H" id="PPd-JJ-2Vz"/>
+                        <outlet property="btn2" destination="kpK-g8-vQy" id="Nxx-rr-i8d"/>
+                        <outlet property="btn3" destination="yB9-wG-ACa" id="NeO-o4-EAh"/>
                         <outlet property="cas1" destination="f16-sT-wiv" id="0gn-OZ-4cl"/>
                         <outlet property="cas2" destination="KUz-YV-bQF" id="sVG-Og-qPf"/>
                         <outlet property="cas3" destination="jx8-JG-BeK" id="R87-Fk-doB"/>
@@ -193,12 +205,13 @@
                         <outlet property="cas8" destination="RXT-Gl-anx" id="48I-8c-40V"/>
                         <outlet property="cas9" destination="X7G-L4-7xf" id="6DK-yO-SCH"/>
                         <outlet property="dadoImg" destination="s8I-7W-uYJ" id="ddq-Ip-wgl"/>
+                        <outlet property="enunciadoTxt" destination="Y9O-DB-JLi" id="HEm-BK-JCU"/>
                         <outlet property="etiquetaDificultad" destination="PgY-8p-89G" id="O44-tV-daH"/>
                         <outlet property="etiquetaPuntos" destination="uVN-HV-czX" id="vHk-Hn-JdE"/>
                         <outlet property="etiquetaTurnoJugador" destination="Hc1-sB-70N" id="hNA-Mv-ng1"/>
                         <outlet property="etiquetaVidas" destination="aWd-gp-Ub2" id="395-wi-Yzp"/>
-                        <outlet property="puntos" destination="Phx-Nk-Crj" id="p9i-jV-l28"/>
-                        <outlet property="puntosj2" destination="F2I-Up-wnr" id="VfG-Vp-Y2B"/>
+                        <outlet property="puntos" destination="Phx-Nk-Crj" id="AAq-xk-GLr"/>
+                        <outlet property="puntosj2" destination="F2I-Up-wnr" id="75i-yM-99y"/>
                         <outlet property="vidas" destination="Z90-AI-3S4" id="MgL-Fg-XF3"/>
                         <outlet property="vidasj2" destination="2db-aL-hdq" id="LYs-Ge-Wd8"/>
                         <segue destination="Uge-FV-VdN" kind="show" identifier="returnMenuSegue" id="XC1-i0-4K7"/>
