@@ -11,6 +11,7 @@ class ViewControllerJuego: UIViewController {
 
     //Objetos en vista
     @IBOutlet weak var etiquetaParaDefinirJuego: UILabel!
+    @IBOutlet weak var fondoDePantalla: UIImageView!
     
     
     //Variables Globales
@@ -19,7 +20,8 @@ class ViewControllerJuego: UIViewController {
     //ViewLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fondoDePantalla.image = UIImage(named: "fondo")
+        self.view.sendSubviewToBack(fondoDePantalla)
         // Do any additional setup after loading the view.
     }
     
