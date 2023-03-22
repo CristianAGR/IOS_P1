@@ -83,10 +83,10 @@ class ViewController: UIViewController {
     
     func establecerEtiquetaTurno(){
         if(turno == 1){
-            etiquetaTurnoJugador.text = "Es el turno del: Jugador1"
+            etiquetaTurnoJugador.text = "Es el turno del: Jugador 1"
         }
         if(turno == 2){
-            etiquetaTurnoJugador.text = "Es el turno del: Jugador2"
+            etiquetaTurnoJugador.text = "Es el turno del: Jugador 2"
         }
     }
     
