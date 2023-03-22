@@ -275,6 +275,13 @@
                                 <rect key="frame" x="92" y="594" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXf-qo-WP3">
+                                <rect key="frame" x="91" y="565" width="241" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XqH-dN-7Q5"/>
                         <color key="backgroundColor" red="0.67953898369999999" green="0.89000000000000001" blue="0.50786997599999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -287,6 +294,7 @@
                         <outlet property="etiquetaParaDificultad" destination="rV1-De-oBH" id="RHg-Ch-xZi"/>
                         <outlet property="etiquetaParaPuntos" destination="ouK-am-V9R" id="RVk-xM-JD5"/>
                         <outlet property="etiquetaParaVidas" destination="8HC-ik-FcY" id="ife-BC-02o"/>
+                        <outlet property="finalTxt" destination="HXf-qo-WP3" id="e2a-i3-Rov"/>
                         <outlet property="image" destination="Dpx-fk-KcD" id="Uxt-om-46u"/>
                         <outlet property="preguntaTxt" destination="7V9-c8-dZY" id="fJa-iX-vK1"/>
                         <outlet property="puntuacion" destination="OhK-oi-xQU" id="N3y-Yl-DIS"/>
