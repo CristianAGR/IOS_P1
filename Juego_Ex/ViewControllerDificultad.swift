@@ -28,6 +28,7 @@ class ViewControllerDificultad: UIViewController {
     var vidas = 0
     var puntosParaGanar = 0
     var turno = 0
+    var juego: String?
     
 //    Variables Globales que reciben valores
     var juegoAJugar: String?
