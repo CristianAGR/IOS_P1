@@ -61,7 +61,7 @@ class QuizController: UIViewController {
     var imagenesQuizintermedio = [["muro"],["alex"],["nuevaZelanda"],["diad"],["revrusa"],["grandepre"],["chernobyl"],["atlas"],["bolchevique"],["galileo-galilei"]]
     
     //Arreglo Imágenes Difícil
-    var imagenesQuizDificil = [[""],[""],[""],[""],[""],[""],[""],[""],[""],[""]]
+    var imagenesQuizDificil = [["emu"],["napo"],["rommel"],["alamein"],["luftwaffe"],["stalingrado"],["jutland"],["guadalcanal"],["dora"],["porsche"]]
     
     
     //ArregloPreguntasIntermedio
