@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btn1: UIButton!
     @IBOutlet weak var btn2: UIButton!
     @IBOutlet weak var btn3: UIButton!
+    @IBOutlet weak var resultadoTxt: UILabel!
     
     //Variables Globales
     let caras = ["dado.png","dado-2.png","dado-3.png","dado-4.png","dado-5.png","dado-6.png"];
@@ -216,17 +217,27 @@ class ViewController: UIViewController {
         
         
         if(resultado == "VICTORIA") {
-            if (turno == 1) {
-                puntosV += 1;
-                puntos.text = String(puntosV);
-            } else {
-                puntosj2V += 1;
-                puntosj2.text = String(puntosj2V);
-            }
-            
+            asignarPuntos()
         }
         quiz.remove(at: anterior)
         bloquearBotones()
+    }
+    
+    func asignarPuntos(){
+        if (turno == 1) {
+            puntosV += 1;
+            puntos.text = String(puntosV);
+            if (puntosV == Int(puntosGanar ?? "80")) {
+                resultadoTxt.text = "Has ganado Jugador 1"
+            }
+        } else {
+            puntosj2V += 1;
+            puntosj2.text = String(puntosj2V);
+            if (puntosj2V == Int(puntosGanar ?? "80")) {
+                resultadoTxt.text = "Has ganado Jugador 2"
+            }
+        }
+        
     }
     
 
