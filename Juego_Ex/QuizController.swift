@@ -25,6 +25,7 @@ class QuizController: UIViewController {
     //Botones
     @IBOutlet weak var btnV: UIButton!
     @IBOutlet weak var btnF: UIButton!
+    @IBOutlet weak var finalTxt: UILabel!
     
     //Variables Globales
     var anterior:Int = 0
@@ -101,8 +102,13 @@ class QuizController: UIViewController {
     
     //Funciones
     func bloquearBotones() {
+        finalTxt.isHidden = false
+        finalTxt.text = resultado
+        
         btnV.isEnabled = false
         btnF.isEnabled = false
+        btnV.isHidden = true
+        btnF.isHidden = true
     }
     
     func iniciar() {
