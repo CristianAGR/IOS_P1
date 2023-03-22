@@ -26,6 +26,8 @@ class QuizController: UIViewController {
     @IBOutlet weak var btnV: UIButton!
     @IBOutlet weak var btnF: UIButton!
     @IBOutlet weak var finalTxt: UILabel!
+    @IBOutlet weak var btnRestart: UIButton!
+    
     
     //Variables Globales
     var anterior:Int = 0
@@ -111,6 +113,11 @@ class QuizController: UIViewController {
         btnF.isHidden = true
     }
     
+    func desbloquearReinicio(){
+        btnRestart.isEnabled = true
+        btnRestart.isHidden = false
+    }
+    
     func iniciar() {
         dificultadLabel.text = dificultad
         if (dificultadLabel.text == "BÁSICO!!!!!") {
@@ -139,6 +146,10 @@ class QuizController: UIViewController {
         return aleatorio
     }
     
+    func reiniciar(){
+        performSegue(withIdentifier: "returnMenuSegue", sender: self)
+    }
+    
     //Actions
     @IBAction func comprobarRespuesta(_ sender: UIButton) {
         let respUser = sender.currentTitle ?? "grbt"
@@ -154,6 +165,7 @@ class QuizController: UIViewController {
             if (puntuacionValue == victoria) {
                 resultado = "VICTORIA"
                 bloquearBotones()
+                desbloquearReinicio()
                 //performSegue(withIdentifier: "finSegue", sender: self)
             }
         } else {
@@ -165,6 +177,7 @@ class QuizController: UIViewController {
             if (vidasValue == derrota) {
                 resultado = "DERROTA"
                 bloquearBotones()
+                desbloquearReinicio()
                 //performSegue(withIdentifier: "finSegue", sender: self)
             }
             
@@ -174,9 +187,13 @@ class QuizController: UIViewController {
         
         //print(sender .title)
         quiz.remove(at: anterior)
+        imagenQuiz.remove(at: anterior)
         anterior = lanzarPregunta()
     }
     
+    @IBAction func Reinicio(_ sender: Any) {
+        reiniciar()
+    }
     
 
 }
