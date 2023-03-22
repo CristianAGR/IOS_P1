@@ -54,10 +54,10 @@ class QuizController: UIViewController {
                       ["¿El rey Arturo existió realmente como el rey de Gran Bretaña?","Falso"]]
     
     //Arreglo Imágenes Básico
-    var imagenesQuizBasico = [["independencia-mexico"],["cristobalColon"],["china"],["monia"],["edison"],["zeus"],["peste"],[""],[""],[""]]
+    var imagenesQuizBasico = [["independencia-mexico"],["cristobalColon"],["china"],["monia"],["edison"],["zeus"],["peste"],["hitler"],["antiguo-egipto"],["reyarturo"]]
     
     //Arreglo Imágenes Intermedio
-    var imagenesQuizintermedio = [[""],[""],[""],[""],[""],[""],[""],[""],[""],[""]]
+    var imagenesQuizintermedio = [["muro"],["alex"],["nuevaZelanda"],["diad"],["revrusa"],["grandepre"],["chernobyl"],["atlas"],["bolchevique"],["galileo-galilei"]]
     
     //Arreglo Imágenes Difícil
     var imagenesQuizDificil = [[""],[""],[""],[""],[""],[""],[""],[""],[""],[""]]
@@ -67,7 +67,7 @@ class QuizController: UIViewController {
     var quizIntermedio = [
     ["¿El muro de Berlín fue derribado en 1989?","Verdadero"],
     ["¿Alejandro Magno fue el rey de la antigua Roma?","Falso"],
-    ["¿Nueva Zelanda fue el primer país en otorgar a las muejeres el derecho al voto?", "Verdadero"],
+    ["¿Nueva Zelanda fue el primer país en otorgar a las mujeres el derecho al voto?", "Verdadero"],
     ["¿El día D en la Segunda Guera Mundial fue el 6 de Noviembre de 1944?","Falso"],
     ["¿Rusia se retiró de la Primera guerra Mundial por su revolución?","Verdadero"],
     ["¿La Gran Depresión ocurrió después de la Segunda Guerra Mundial?","Falso"],
