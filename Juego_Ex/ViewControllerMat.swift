@@ -11,39 +11,52 @@ class ViewControllerMat: UIViewController {
     //Objetos En Vista
     //Puntuaciones de cada jugador
     @IBOutlet weak var puntos: UILabel!
-    @IBOutlet weak var puntosj2: UILabel!
     @IBOutlet weak var dificultadLabel: UILabel!
     //Vidas de cada jugador
     @IBOutlet weak var vidas: UILabel!
-    @IBOutlet weak var vidasj2: UILabel!
     //Etiquetas de pregunta
     @IBOutlet weak var n1: UILabel!
     @IBOutlet weak var operador: UILabel!
     @IBOutlet weak var n2: UILabel!
+    //EtiquetasExtra
+    @IBOutlet weak var Ganar_Perder_Mensaje: UILabel!
+    @IBOutlet weak var etiquetaApoyoVidasIniciales: UILabel!
     //Imagen
     @IBOutlet weak var respuestaCorrectaIncorrecta: UIImageView!
     //Botones
     @IBOutlet weak var b1: UIButton!
     @IBOutlet weak var b2: UIButton!
     @IBOutlet weak var b3: UIButton!
+    @IBOutlet weak var botonReinicio: UIButton!
+    
     
     
     //Variables globales
     var arregloPosiblesRespuestas:[Int] = [0,0,0]
     var operadores:[String] = ["+","-","/","*"]
     var puntuacion = 0
+    var puntosGanar: String?
+    var puntuacionParaGanar = 100
     var vidasPuntaje = 3
+    var vidasIniciales:String?
     var dificultad: String?
     
     //ViewLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         dificultadLabel.text = dificultad
+        asignarVidas()
+        establecerVidas()
+        asignarPuntosParaGanar()
         inicializar()
         // Do any additional setup after loading the view.
     }
 
     //Funciones
+    func asignarPuntosParaGanar(){
+        puntuacionParaGanar = Int(String(puntosGanar ?? "")) ?? 0
+    }
+    
     func asignarRespuestas(){
         let resultado1 = generarResultadoErroneo()
         let resultado2 = generarResultadoErroneo()
@@ -72,10 +85,19 @@ class ViewControllerMat: UIViewController {
         b3.setTitle(String(arregloPosiblesRespuestas[2]), for: .normal)
     }
     
+    func asignarVidas(){
+        etiquetaApoyoVidasIniciales.text = String(vidasIniciales ?? "")
+    }
+    
     func bloquearBotones(){
         b1.isEnabled = false
         b2.isEnabled = false
         b3.isEnabled = false
+    }
+    
+    func bloquearReinicio(){
+        botonReinicio.isEnabled = false
+        botonReinicio.isHidden = true
     }
     
     func desbloquearBotones(){
@@ -84,25 +106,38 @@ class ViewControllerMat: UIViewController {
         b3.isEnabled = true
     }
     
+    func desbloquearReinicio(){
+        botonReinicio.isEnabled = true
+        botonReinicio.isHidden = false
+    }
+    
     func establecerImagen(_ bandera:Bool){
         respuestaCorrectaIncorrecta.isHidden = false
         if(bandera){
-            respuestaCorrectaIncorrecta.image = UIImage(named: "correcto.png")
+            respuestaCorrectaIncorrecta.image = UIImage(named: "Correcto.png")
         }else{
             respuestaCorrectaIncorrecta.image = UIImage(named: "incorrecto.png")
         }
+    }
+    
+    func establecerVidas(){
+        vidasPuntaje = Int(String(etiquetaApoyoVidasIniciales.text ?? "")) ?? 1000
+        vidas.text = "Vidas: \(vidasPuntaje)"
     }
     
     func evaluarRespuesta(_ opcionEscogida:String){
         let respuestaCorrecta = String(transformarCadenaAExpresionMatematica())
         if(opcionEscogida == respuestaCorrecta){
             puntuacion += 1
-            puntos.text = "\(puntuacion)"
+            puntos.text = "Puntuación: \(puntuacion)"
             establecerImagen(true)
-            if(puntuacion<10){
+            if(puntuacion<puntuacionParaGanar){
+                inicializar()
             }
-            if(puntuacion==10){
-                
+            if(puntuacion==puntuacionParaGanar){
+                mensajeAGanador()
+                bloquearBotones()
+                desbloquearReinicio()
             }
         }else{
             vidasPuntaje -= 1
@@ -112,6 +147,7 @@ class ViewControllerMat: UIViewController {
             if(vidasPuntaje==0){
                 mensajeAPerdedor()
                 bloquearBotones()
+                desbloquearReinicio()
             }
         }
     }
@@ -146,11 +182,17 @@ class ViewControllerMat: UIViewController {
     }
     
     func mensajeAGanador(){
-        
+        Ganar_Perder_Mensaje.isHidden = false
+        Ganar_Perder_Mensaje.text = "Ganaste"
     }
     
     func mensajeAPerdedor(){
-        
+        Ganar_Perder_Mensaje.isHidden = false
+        Ganar_Perder_Mensaje.text = "Perdiste"
+    }
+    
+    func reiniciar(){
+        performSegue(withIdentifier: "returnMenuSegue", sender: self)
     }
     
     func transformarCadenaAExpresionMatematica() -> Int {
@@ -162,15 +204,14 @@ class ViewControllerMat: UIViewController {
         return mathValue
     }
     
-
-    
     //Actions
     @IBAction func EvaluarRespuesta(_ sender:UIButton) {
         let opcionEscogida = sender.currentTitle
         print(opcionEscogida ?? "Nulo")
         evaluarRespuesta(opcionEscogida ?? "-10000")
     }
+    @IBAction func btnReiniciar(_ sender: Any) {
+        reiniciar()
+    }
     
-    
-
 }

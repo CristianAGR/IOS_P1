@@ -9,6 +9,14 @@ import UIKit
 
 class ViewControllerJuego: UIViewController {
 
+    //Objetos en vista
+    @IBOutlet weak var etiquetaParaDefinirJuego: UILabel!
+    
+    
+    //Variables Globales
+    
+    
+    //ViewLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,9 +33,16 @@ class ViewControllerJuego: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    //Funciones
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let enviarJuego = segue.destination as? ViewControllerDificultad else {return}
+        enviarJuego.juegoAJugar = etiquetaParaDefinirJuego.text
+    }
+    
+    //Actions
     @IBAction func establecerJuego(_ sender: UIButton) {
-        let juego = sender.currentTitle
+        etiquetaParaDefinirJuego.text = sender.titleLabel?.text ?? ""
         self.performSegue(withIdentifier: "irDificultad", sender: self)
     }
 }

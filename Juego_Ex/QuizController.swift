@@ -9,18 +9,24 @@
 import UIKit
 
 class QuizController: UIViewController {
-
+    //etiquetasDeApoyo
     @IBOutlet weak var etiquetaParaVidas: UILabel!
     @IBOutlet weak var etiquetaParaPuntos: UILabel!
     @IBOutlet weak var etiquetaParaDificultad: UILabel!
+    //Imagenes
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var questionImage: UIImageView!
+    //Espacio para pregunta
     @IBOutlet weak var preguntaTxt: UILabel!
+    //Etiquetas con datos en pantalla
     @IBOutlet weak var vidas: UILabel!
     @IBOutlet weak var puntuacion: UILabel!
     @IBOutlet weak var dificultadLabel: UILabel!
+    //Botones
     @IBOutlet weak var btnV: UIButton!
     @IBOutlet weak var btnF: UIButton!
     
+    //Variables Globales
     var anterior:Int = 0
     var puntuacionValue:Int = 0
     var incorrecto:Int = 0
@@ -29,9 +35,13 @@ class QuizController: UIViewController {
     var resultado = ""
     var vidasValue = 0
     
+    //Variables Globales Que Reciben Datos
     var dificultad: String?
+    
     // tematica: preguntas raras de historia
-    var quiz = [["",""]]//ArregloPreguntasBasico
+    var quiz = [["",""]]
+    var imagenQuiz = [["",""]]
+    //ArregloPreguntasBasico
     var quizBasico = [["¿La independencia de México inició en 1810?","Verdadero"],
                       ["¿Cristobal Colón exploró el nuevo mundo?","Verdadero"],
                       ["¿China es la civilización más antigua del mundo?","Falso"],
@@ -42,6 +52,16 @@ class QuizController: UIViewController {
                       ["¿Hitler fue el líder del partido Nacional Socialista?","Verdadero"],
                       ["¿En Egipto solo alababan a un Dios?","Falso"],
                       ["¿El rey Arturo existió realmente como el rey de Gran Bretaña?","Falso"]]
+    
+    //Arreglo Imágenes Básico
+    var imagenesQuizBasico = [["independencia-mexico"],[""],[""],[""],[""],[""],[""],[""],[""],[""]]
+    
+    //Arreglo Imágenes Intermedio
+    var imagenesQuizintermedio = [[""],[""],[""],[""],[""],[""],[""],[""],[""],[""]]
+    
+    //Arreglo Imágenes Difícil
+    var imagenesQuizDificil = [[""],[""],[""],[""],[""],[""],[""],[""],[""],[""]]
+    
     
     //ArregloPreguntasIntermedio
     var quizIntermedio = [
@@ -68,6 +88,8 @@ class QuizController: UIViewController {
     ["¿La batalla de Guadalcanal aseguró la victoria estadounidense frente a Japón en la Segunda Guerra Mundial?","Falso"],
     ["¿Existió un artefacto o artilugio apodado Dora durante la Segunda Guerra Mundial?","Verdadero"],
     ["¿Ferdinand Porsche diseñó y creó algunos de los tanques durante la Segunda Guerra Mundial?","Verdadero"]]
+    
+    //ViewLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         iniciar()
@@ -76,20 +98,30 @@ class QuizController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    //Funciones
+    func bloquearBotones() {
+        btnV.isEnabled = false
+        btnF.isEnabled = false
+    }
+    
     func iniciar() {
         dificultadLabel.text = dificultad
         if (dificultadLabel.text == "BÁSICO!!!!!") {
             victoria = 5
             vidasValue = 3
             quiz = quizBasico
+            imagenQuiz = imagenesQuizBasico
         } else if (dificultadLabel.text == "Intermedio") {
             victoria = 7
             vidasValue = 2
             quiz = quizIntermedio
+            imagenQuiz = imagenesQuizintermedio
         } else if (dificultadLabel.text == "Avanzado") {
             victoria = 10
             vidasValue = 1
             quiz = quizAvanzado
+            imagenQuiz = imagenesQuizDificil
         }
         vidas.text = "Vidas: " + String(vidasValue)
     }
@@ -97,14 +129,11 @@ class QuizController: UIViewController {
     func lanzarPregunta()->Int {
         let aleatorio = Int.random(in: 0...quiz.count-1)
         preguntaTxt.text = quiz[aleatorio][0]
+        questionImage.image = UIImage(named: imagenQuiz[aleatorio][0])
         return aleatorio
     }
     
-    func bloquearBotones() {
-        btnV.isEnabled = false
-        btnF.isEnabled = false
-    }
-    
+    //Actions
     @IBAction func comprobarRespuesta(_ sender: UIButton) {
         let respUser = sender.currentTitle ?? "grbt"
         let respActual = quiz[anterior][1]
