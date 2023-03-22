@@ -54,7 +54,7 @@ class QuizController: UIViewController {
                       ["¿El rey Arturo existió realmente como el rey de Gran Bretaña?","Falso"]]
     
     //Arreglo Imágenes Básico
-    var imagenesQuizBasico = [["independencia-mexico"],[""],[""],[""],[""],[""],[""],[""],[""],[""]]
+    var imagenesQuizBasico = [["independencia-mexico"],["cristobalColon"],["china"],["monia"],["edison"],["zeus"],["peste"],[""],[""],[""]]
     
     //Arreglo Imágenes Intermedio
     var imagenesQuizintermedio = [[""],[""],[""],[""],[""],[""],[""],[""],[""],[""]]
