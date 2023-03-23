@@ -98,6 +98,8 @@ class ViewController: UIViewController {
         if (turno == 1) {
             puntosV += 1;
             puntos.text = String(puntosV);
+            rachaV += 1;
+            racha.text = "Racha: " + String(rachaV);
             avanzar()
             cambiarturno()
             establecerEtiquetaTurno()
@@ -108,6 +110,7 @@ class ViewController: UIViewController {
             puntosj2V += 1;
             puntosj2.text = String(puntosj2V);
             rachaj2V += 1;
+            rachaj2.text = "Racha: " + String(rachaj2V);
             avanzar()
             cambiarturno()
             establecerEtiquetaTurno()
@@ -175,6 +178,8 @@ class ViewController: UIViewController {
         if (turno == 1) {
             vidasV -= 1;
             vidas.text = "Vidas: " + String(vidasV);
+            rachaV = 0;
+            racha.text = "Racha: " + String(rachaV);
             cambiarturno()
             establecerEtiquetaTurno()
             if (vidasV == 0) {
@@ -183,6 +188,8 @@ class ViewController: UIViewController {
         } else {
             vidasj2V -= 1;
             vidasj2.text = "Vidas: " + String(vidasj2V);
+            rachaj2V = 0;
+            rachaj2.text = "Racha: " + String(rachaj2V);
             cambiarturno()
             establecerEtiquetaTurno()
             if (vidasj2V == 0) {
