@@ -210,7 +210,7 @@
                                 <rect key="frame" x="39" y="740" width="313" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.44216683509999999" green="0.3149295151" blue="0.1730947793" alpha="0.75376467670000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -921,7 +921,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XC1-i0-4K7"/>
+        <segue reference="62q-kC-oQD"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="fondo" width="1280" height="904"/>
