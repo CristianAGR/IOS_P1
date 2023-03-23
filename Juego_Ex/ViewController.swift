@@ -83,8 +83,147 @@ class ViewController: UIViewController {
     //Funciones Generales
     func asignarPosicion(_ posicionAnterior: Int, _ posicionNueva:Int){
         if(turno == 1){
+            if(posicionj1 == posicionj2){
+                switch(posicionNueva){
+                    case 1:
+                        cas1.image = UIImage(named: "2j")
+                    break;
+                    case 2:
+                        cas2.image = UIImage(named: "2j")
+                    break;
+                    case 3:
+                        cas3.image = UIImage(named: "2j")
+                    break;
+                    case 4:
+                        cas4.image = UIImage(named: "2j")
+                    break;
+                    case 5:
+                        cas5.image = UIImage(named: "2j")
+                    break;
+                    case 6:
+                        cas6.image = UIImage(named: "2j")
+                    break;
+                    case 7:
+                        cas7.image = UIImage(named: "2j")
+                    break;
+                    case 8:
+                        cas8.image = UIImage(named: "2j")
+                    break;
+                default:
+                    break;
+                }
+            }
             switch(posicionAnterior){
                 case 1:
+                    cas1.image = UIImage(named: "vacio")
+                break;
+                case 2:
+                    cas2.image = UIImage(named: "vacio")
+                break;
+                case 3:
+                    cas3.image = UIImage(named: "vacio")
+                break;
+                case 4:
+                    cas4.image = UIImage(named: "vacio")
+                break;
+                case 5:
+                    cas5.image = UIImage(named: "vacio")
+                break;
+                case 6:
+                    cas6.image = UIImage(named: "vacio")
+                break;
+                case 7:
+                    cas7.image = UIImage(named: "vacio")
+                break;
+                case 8:
+                    cas8.image = UIImage(named: "vacio")
+                break;
+            default:
+                break;
+            }
+            switch(posicionNueva){
+                case 1:
+                    cas1.image = UIImage(named: "j1")
+                break;
+                case 2:
+                    cas2.image = UIImage(named: "j1")
+                break;
+                case 3:
+                    cas3.image = UIImage(named: "j1")
+                break;
+                case 4:
+                    cas4.image = UIImage(named: "j1")
+                break;
+                case 5:
+                    cas5.image = UIImage(named: "j1")
+                break;
+                case 6:
+                    cas6.image = UIImage(named: "j1")
+                break;
+                case 7:
+                    cas7.image = UIImage(named: "j1")
+                break;
+                case 8:
+                    cas8.image = UIImage(named: "j1")
+                break;
+            default:
+                break;
+            }
+        }else{
+            switch(posicionAnterior){
+                case 1:
+                    cas1.image = UIImage(named: "vacio")
+                break;
+                case 2:
+                    cas2.image = UIImage(named: "vacio")
+                break;
+                case 3:
+                    cas3.image = UIImage(named: "vacio")
+                break;
+                case 4:
+                    cas4.image = UIImage(named: "vacio")
+                break;
+                case 5:
+                    cas5.image = UIImage(named: "vacio")
+                break;
+                case 6:
+                    cas6.image = UIImage(named: "vacio")
+                break;
+                case 7:
+                    cas7.image = UIImage(named: "vacio")
+                break;
+                case 8:
+                    cas8.image = UIImage(named: "vacio")
+                break;
+            default:
+                break;
+            }
+            switch(posicionNueva){
+                case 1:
+                    cas1.image = UIImage(named: "j2")
+                break;
+                case 2:
+                    cas2.image = UIImage(named: "j2")
+                break;
+                case 3:
+                    cas3.image = UIImage(named: "j2")
+                break;
+                case 4:
+                    cas4.image = UIImage(named: "j2")
+                break;
+                case 5:
+                    cas5.image = UIImage(named: "j2")
+                break;
+                case 6:
+                    cas6.image = UIImage(named: "j2")
+                break;
+                case 7:
+                    cas7.image = UIImage(named: "j2")
+                break;
+                case 8:
+                    cas8.image = UIImage(named: "j2")
+                break;
+            default:
                 break;
             }
         }
