@@ -20,6 +20,13 @@
                                 <rect key="frame" x="0.0" y="-11" width="393" height="869"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Racha: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtw-Tl-nFM">
+                                <rect key="frame" x="112" y="122" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUW-34-Sga">
                                 <rect key="frame" x="10" y="-1" width="10" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -316,6 +323,13 @@
                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Racha: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA3-6V-QGG">
+                                <rect key="frame" x="200" y="123" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -345,6 +359,8 @@
                         <outlet property="etiquetaVidas" destination="aWd-gp-Ub2" id="395-wi-Yzp"/>
                         <outlet property="puntos" destination="Phx-Nk-Crj" id="p9i-jV-l28"/>
                         <outlet property="puntosj2" destination="F2I-Up-wnr" id="VfG-Vp-Y2B"/>
+                        <outlet property="racha" destination="qtw-Tl-nFM" id="k43-tu-rB2"/>
+                        <outlet property="rachaj2" destination="OA3-6V-QGG" id="Qpi-tK-9Zj"/>
                         <outlet property="resultadoTxt" destination="N7s-3D-Ayn" id="HJg-b2-biM"/>
                         <outlet property="vidas" destination="Z90-AI-3S4" id="MgL-Fg-XF3"/>
                         <outlet property="vidasj2" destination="2db-aL-hdq" id="LYs-Ge-Wd8"/>
