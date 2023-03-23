@@ -24,7 +24,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var etiquetaTurnoJugador: UILabel!
     @IBOutlet weak var etiquetaVidas: UILabel!
     @IBOutlet weak var puntos: UILabel!
+    @IBOutlet weak var racha: UILabel!
     @IBOutlet weak var puntosj2: UILabel!
+    @IBOutlet weak var rachaj2: UILabel!
     @IBOutlet weak var vidas: UILabel!
     @IBOutlet weak var vidasj2: UILabel!
     @IBOutlet weak var enunciadoTxt: UILabel!
@@ -40,7 +42,9 @@ class ViewController: UIViewController {
     let caras = ["dado.png","dado-2.png","dado-3.png","dado-4.png","dado-5.png","dado-6.png"];
     var cara = 0
     var puntosV = 0;
+    var rachaV = 0;
     var puntosj2V = 0;
+    var rachaj2V = 0;
     var vidasV = 0;
     var vidasj2V = 0;
     var posicionAnteriorJ1 = 0;
@@ -233,6 +237,8 @@ class ViewController: UIViewController {
         if (turno == 1) {
             puntosV += 1;
             puntos.text = String(puntosV);
+            rachaV += 1;
+            racha.text = "Racha: " + String(rachaV);
             avanzar()
             cambiarturno()
             establecerEtiquetaTurno()
@@ -242,6 +248,8 @@ class ViewController: UIViewController {
         } else {
             puntosj2V += 1;
             puntosj2.text = String(puntosj2V);
+            rachaj2V += 1;
+            rachaj2.text = "Racha: " + String(rachaj2V);
             avanzar()
             cambiarturno()
             establecerEtiquetaTurno()
@@ -309,6 +317,8 @@ class ViewController: UIViewController {
         if (turno == 1) {
             vidasV -= 1;
             vidas.text = "Vidas: " + String(vidasV);
+            rachaV = 0;
+            racha.text = "Racha: " + String(rachaV);
             cambiarturno()
             establecerEtiquetaTurno()
             if (vidasV == 0) {
@@ -317,6 +327,8 @@ class ViewController: UIViewController {
         } else {
             vidasj2V -= 1;
             vidasj2.text = "Vidas: " + String(vidasj2V);
+            rachaj2V = 0;
+            rachaj2.text = "Racha: " + String(rachaj2V);
             cambiarturno()
             establecerEtiquetaTurno()
             if (vidasj2V == 0) {

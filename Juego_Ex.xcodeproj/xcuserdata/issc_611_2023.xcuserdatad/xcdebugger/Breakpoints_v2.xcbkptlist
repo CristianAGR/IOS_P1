@@ -29,7 +29,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "309"
             endingLineNumber = "309"
-            landmarkName = "iniciarPreguntas()"
+            landmarkName = "establecerEtiquetaTurno()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -45,8 +45,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "465"
             endingLineNumber = "465"
-            landmarkName = "lanzarDado(_:)"
-            landmarkType = "7">
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
