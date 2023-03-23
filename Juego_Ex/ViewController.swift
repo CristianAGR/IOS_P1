@@ -47,6 +47,8 @@ class ViewController: UIViewController {
     var rachaj2V = 0;
     var vidasV = 0;
     var vidasj2V = 0;
+    var posicionAnteriorJ1 = 0;
+    var posicionAnteriorJ2 = 0;
     var posicionj1 = 0
     var posicionj2 = 0
     
@@ -83,11 +85,20 @@ class ViewController: UIViewController {
     }
     
     //Funciones Generales
+    func asignarPosicion(_ posicionAnterior: Int, _ posicionNueva:Int){
+        if(turno == 1){
+            switch(posicionAnterior){
+                case 1:
+                break;
+            }
+        }
+    }
+    
     func asignarPuntos(){
         if (turno == 1) {
             puntosV += 1;
             puntos.text = String(puntosV);
-            rachaV += 1;
+            avanzar()
             cambiarturno()
             establecerEtiquetaTurno()
             if (posicionj1 == 9) {
@@ -97,11 +108,24 @@ class ViewController: UIViewController {
             puntosj2V += 1;
             puntosj2.text = String(puntosj2V);
             rachaj2V += 1;
+            avanzar()
             cambiarturno()
             establecerEtiquetaTurno()
             if (posicionj2 == 9) {
                 resultadoTxt.text = "Has ganado Jugador 2"
             }
+        }
+    }
+    
+    func avanzar(){
+        if (turno == 1) {
+            let puntos = cara + 1
+            posicionAnteriorJ1 = posicionj1
+            posicionj1 += puntos
+        } else {
+            let puntos = cara + 1
+            posicionAnteriorJ2 = posicionj2
+            posicionj2 += puntos
         }
     }
     
@@ -127,9 +151,10 @@ class ViewController: UIViewController {
     func establecerPuntosYVidas (){
         etiquetaDificultad.text = dificultad
         etiquetaVidas.text = vidasIniciales
-        etiquetaPuntos.text = puntosGanar
         vidas.text = "Vidas: " + (etiquetaVidas.text ?? "10000")
         vidasj2.text = "Vidas: " + (etiquetaVidas.text ?? "10000")
+        vidasV = Int(String(vidasIniciales ?? "")) ?? 10
+        vidasj2V = Int(String(vidasIniciales ?? "")) ?? 10
     }
     
     func establecerEtiquetaTurno(){
@@ -148,18 +173,16 @@ class ViewController: UIViewController {
     
     func quitarVidas(){
         if (turno == 1) {
-            vidasV += 1;
-            vidas.text = String(puntosV);
-            rachaV = 0;
+            vidasV -= 1;
+            vidas.text = "Vidas: " + String(vidasV);
             cambiarturno()
             establecerEtiquetaTurno()
             if (vidasV == 0) {
                 resultadoTxt.text = "Jugador 1 Eliminado"
             }
         } else {
-            vidasj2V += 1;
-            vidasj2.text = String(vidasj2V);
-            rachaj2V = 0;
+            vidasj2V -= 1;
+            vidasj2.text = "Vidas: " + String(vidasj2V);
             cambiarturno()
             establecerEtiquetaTurno()
             if (vidasj2V == 0) {
